@@ -138,62 +138,7 @@ class Parentals {
     return $this->_traverse($parent_id);
 
   }
-
-  
-  // ----------------------------------------
-  //  Plugin Usage
-  // ----------------------------------------
-
-  // This function describes how the plugin is used.
-  //  Make sure and use output buffering
-
-  function usage()
-  {
-	  ob_start(); 
-	  ?>
-	This plugin lets you fetch info about parents of given category (direct parent and root).
-    Parameters:
-    category - category id to fetch parent (mandatory)
-    exclude_self="yes" - exclude the current category from output
-    
-    {exp:parentals:parent category="{category_id}"}
-      {cat_id}
-      {cat_name}
-      {cat_url_title}
-      {cat_description}
-      {cat_image}
-      {cat_parent_id}
-    {/exp:parentals:parent}
-	
-    {exp:parentals:root category="{category_id}"}
-      {cat_id}
-      {cat_name}
-      {cat_url_title}
-      {cat_description}
-      {cat_image}
-      {cat_parent_id}
-    {/exp:parentals:root}
-    
-    {exp:parentals:all_parents category="{category_id}"}
-      {cat_id}
-      {cat_name}
-      {cat_url_title}
-      {cat_description}
-      {cat_image}
-      {cat_parent_id}
-    {/exp:parentals:all_parents}
-    
-	  <?php
-	  $buffer = ob_get_contents();
-		
-	  ob_end_clean(); 
-	
-	  return $buffer;
-  }
-  // END
-
 }
-?>
 
 /* End of file pi.parentals.php */
 /* Location: ./system/user/addons/parentals/pi.parentals.php */
