@@ -6,8 +6,7 @@ $plugin_info = array(
   'pi_version' =>'1.0.0',
   'pi_author' =>'BBDOKC',
   'pi_author_url' => 'http://bbdokc.com',
-  'pi_description' => 'BBD Parentals provides you the ability to fetch and use categorical hierarchy without the mess of loops.',
-  'pi_usage' => Category_parents::usage()
+  'pi_description' => 'BBD Parentals provides you the ability to fetch and use categorical hierarchy without the mess of loops.'
   );
 
 class Parentals {
